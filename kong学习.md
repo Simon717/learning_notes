@@ -28,7 +28,7 @@ kong的基本功能==Nginx，代理转发，通过一个例子体会kong的基�
 
 例：一个典型的 Nginx 配置
 
-```json
+```bash
 upstream helloUpstream {
     server localhost:3000 weight=100;
 }
@@ -93,7 +93,7 @@ curl -X POST http://localhost:8001/routes --data "paths[]=/hello" --data "servic
 
 　　c.那怎么样**将tomcat下部署的网站使用Nginx代理呢**？，修改Nginx的配置文件，修改命令：vim /usr/local/nginx/conf/nginx.conf
 
-```json
+```bash
 http {
      #配置tomcat的IP地址和访问端口
      upstream gw {
